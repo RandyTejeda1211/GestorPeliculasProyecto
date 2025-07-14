@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  
+</head>
+<body>
+     <header>
+            <nav class="py-3 d-flex justify-content-between align-items-center ">
+                <span role="button">
+                    <img src="../assets/burguer-icon.svg" alt="">
+                </span>
+                <div>
+                    <h1>Agregar peliculas</h1>
+                </div>
+                <div class="d-flex gap-3 d-none d-sm-flex">
+                    <a href="../index.html" class="btn btn-primary">catalogo</a>    
+                </div>
+            </nav>
+        </header>
+        <!-- Formulario para agregar una película -->
+<div class="container mt-5">
+  <h3>Agregar nueva película</h3>
+  <form id="formAgregarPelicula">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" class="form-control" id="titulo" required>
+    </div>
+    <div class="mb-3">
+      <label for="genero" class="form-label">Género</label>
+      <input type="text" class="form-control" id="genero" required>
+    </div>
+    <div class="mb-3">
+      <label for="director" class="form-label">Director</label>
+      <input type="text" class="form-control" id="director" required>
+    </div>
+    <div class="mb-3">
+      <label for="calificacion" class="form-label">Calificación (0–10)</label>
+      <input type="number" class="form-control" id="calificacion" min="0" max="10" required>
+    </div>
+    <div class="mb-3">
+      <label for="cartelPelicula" class="form-label">URL del cartel</label>
+      <input type="url" class="form-control" id="cartelPelicula" required>
+    </div>
+    <div class="mb-3">
+      <label for="urlPelicula" class="form-label">URL del trailer</label>
+      <input type="url" class="form-control" id="urlPelicula" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar película</button>
+  </form>
+</div>
+
+
+
+
+    <script src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

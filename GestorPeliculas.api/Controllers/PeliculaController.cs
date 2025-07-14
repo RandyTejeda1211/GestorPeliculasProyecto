@@ -27,13 +27,13 @@ namespace GestorPeliculas.api.Controllers
         public async Task<IActionResult> obtenerTodo() => Ok(await _services.ObtenerPeliculas());
 
         [HttpPut]
-        public async Task<IActionResult> actualizar([FromBody] GetPeliculaDTO createPelicula)
+        public async Task<IActionResult> actualizar([FromBody] UpdatePeliculaDTO updatePeliculaDTO)
         {
-            await _services.Actualizar(createPelicula);
+            await _services.Actualizar(updatePeliculaDTO);
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> eliminar(int id)
         {
             await _services.EliminarPelicula(id);

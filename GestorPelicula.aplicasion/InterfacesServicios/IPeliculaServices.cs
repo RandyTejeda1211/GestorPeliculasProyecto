@@ -12,7 +12,7 @@ namespace GestorPelicula.aplicasion.InterfacesServicios
         Task<IEnumerable<GetPeliculaDTO>> ObtenerPeliculas();
         Task<GetPeliculaDTO> ObtenerPorID(int id);
         Task CrearPelicula(CreatePeliculaDTO peliculas);
-        Task Actualizar(GetPeliculaDTO peliculas);
+        Task Actualizar(UpdatePeliculaDTO peliculas);
         Task EliminarPelicula(int id);
     }
 }

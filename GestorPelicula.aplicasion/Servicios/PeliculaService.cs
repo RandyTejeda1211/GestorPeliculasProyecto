@@ -17,14 +17,14 @@ namespace GestorPelicula.aplicasion.Servicios
         {
             _peliculaRepositorio = peliculaRepositorio;
         }
-        public async Task Actualizar(GetPeliculaDTO peliculas)
+        public async Task Actualizar(UpdatePeliculaDTO peliculas)
         {
             var pelicula = await _peliculaRepositorio.ObtenerPorID(peliculas.Id);
 
             pelicula.Titulo = peliculas.Titulo;
             pelicula.Genero = peliculas.Genero;
             pelicula.Director = peliculas.Director;
-            pelicula.Calificacion = peliculas.Calificacion;
+            pelicula.Calificacion = (byte)peliculas.Calificacion;
             pelicula.CartelPelicula = peliculas.CartelPelicula;
             pelicula.UrlPelicula = peliculas.UrlPelicula;
 
