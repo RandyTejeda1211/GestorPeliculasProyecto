@@ -23,7 +23,7 @@ API RESTful para la gestión de películas, desarrollada con .NET 8 y Entity Fra
 
   ## Uso
 
-- Accede a la documentación Swagger en: `https://localhost:5001/swagger`
+- Accede a la documentación Swagger en: `https://localhost:0000/swagger` - ***El puerto puede variar segun sea el caso***
 - Ejemplo de endpoints:
   - `GET /api/peliculas` - Listar todas las películas
   - `POST /api/peliculas` - Crear nueva película
