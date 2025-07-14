@@ -24,7 +24,7 @@ builder.Services.AddScoped<IPeliculaServices, PeliculaService>();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Permitir fronted local", policy =>
+    options.AddPolicy("PermitirFrontendLocal", policy =>
     {
         policy
             .AllowAnyOrigin()
@@ -34,7 +34,7 @@ builder.Services.AddCors(options =>
 
 });
 var app = builder.Build();
-app.UseCors("Permitir frontend local")
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -43,6 +43,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("PermitirFrontendLocal");
 
 app.UseAuthorization();
 
